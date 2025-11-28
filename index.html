@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags for Birmingham Area -->
+    <title>Magic Cleaning | Commercial & Domestic Cleaning Services Birmingham</title>
+    <meta name="description" content="Professional cleaning services in Birmingham. Specializing in deep cleaning for restaurants, offices, and homes. End of tenancy experts. Get a free quote today.">
+    <meta name="keywords" content="cleaning services birmingham, commercial cleaning birmingham, deep cleaning, restaurant cleaning, end of tenancy cleaning coventry, office cleaning birmingham">
+    <meta name="author" content="Magic Cleaning Services">
+    
+    <!-- Tailwind CSS (via CDN for speed and responsiveness) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Canvas positioning */
+        #magicCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Behind the text */
+            pointer-events: none; /* Let clicks pass through */
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10; /* Above the canvas */
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
+        }
+        
+        /* Mobile Sticky Button */
+        .sticky-call {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-40 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Logo Text -->
+                    <a href="#" class="text-2xl font-bold text-slate-900 tracking-tighter">
+                        MAGIC<span class="text-yellow-600">CLEANING</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="text-gray-700 hover:text-yellow-600 font-medium transition">Services</a>
+                    <a href="#commercial" class="text-gray-700 hover:text-yellow-600 font-medium transition">Commercial</a>
+                    <a href="#domestic" class="text-gray-700 hover:text-yellow-600 font-medium transition">Domestic</a>
+                    <a href="#contact" class="bg-slate-900 text-white px-5 py-2 rounded-full font-bold hover:bg-slate-800 transition shadow-lg">
+                        Get a Quote
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4">
+            <a href="#services" class="block py-2 text-gray-700 font-medium">Services</a>
+            <a href="#commercial" class="block py-2 text-gray-700 font-medium">Commercial</a>
+            <a href="#domestic" class="block py-2 text-gray-700 font-medium">Domestic</a>
+            <a href="#contact" class="block py-2 mt-2 text-yellow-600 font-bold">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION with CANVAS -->
+    <section class="relative bg-slate-900 h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- The Magic Canvas -->
+        <canvas id="magicCanvas"></canvas>
+        
+        <div class="hero-content text-center px-4 max-w-4xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-yellow-500/20 text-yellow-400 text-sm font-semibold mb-4 border border-yellow-500/50">
+                SERVING BIRMINGHAM & WEST MIDLANDS
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Experience the <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">Magic</span> of a Truly Clean Space.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Professional deep cleaning for restaurants, offices, and homes. We tackle the dirt others leave behind.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-yellow-500 text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition shadow-[0_0_20px_rgba(234,179,8,0.5)] transform hover:-translate-y-1">
+                    Book Free Quote
+                </a>
+                <a href="tel:07914013535" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5"></i> 07914 013535
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <div class="bg-white py-8 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition duration-500">
+            <!-- Mock Badges for SEO trust -->
+            <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-6 h-6 text-slate-800"></i>
+                <span class="font-bold text-slate-800">Fully Insured</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i data-lucide="star" class="w-6 h-6 text-slate-800"></i>
+                <span class="font-bold text-slate-800">5-Star Rated</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-6 h-6 text-slate-800"></i>
+                <span class="font-bold text-slate-800">Local Experts</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES SPLIT SECTION -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tailored cleaning solutions for every need. Whether you run a busy kitchen or need your home back in order.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Commercial / B2B -->
+                <div id="commercial" class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 border border-gray-100">
+                    <div class="h-64 bg-slate-800 relative overflow-hidden">
+                         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
+                         <!-- Abstract representation of commercial kitchen -->
+                         <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-lucide="utensils-crossed" class="w-24 h-24 text-white/20 group-hover:scale-110 transition duration-500"></i>
+                         </div>
+                         <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white">Commercial & Restaurants</h3>
+                         </div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                                <span class="text-gray-700"><strong>Deep Kitchen Cleans:</strong> Surfaces, hoods, and floors ready for inspection.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                                <span class="text-gray-700"><strong>Office Spaces:</strong> Desks, carpets, and communal areas.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                                <span class="text-gray-700"><strong>Flexible Hours:</strong> We clean when you're closed (Late nights/Early mornings).</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full text-center bg-slate-100 text-slate-900 py-3 rounded-lg font-bold hover:bg-slate-200 transition">
+                            Get Business Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Domestic / B2C -->
+                <div id="domestic" class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 border border-gray-100">
+                    <div class="h-64 bg-yellow-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i data-lucide="home" class="w-24 h-24 text-white/30 group-hover:scale-110 transition duration-500"></i>
+                         </div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-2xl font-bold text-white">Domestic & End of Tenancy</h3>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                                <span class="text-gray-700"><strong>End of Tenancy:</strong> Get your deposit back with our guarantee.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                                <span class="text-gray-700"><strong>Deep Spring Cleans:</strong> One-off heavy duty cleaning for neglected homes.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 mr-3 mt-1"></i>
+                                <span class="text-gray-700"><strong>Regular Maintenance:</strong> Weekly or bi-weekly visits.</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full text-center bg-yellow-50 text-yellow-700 py-3 rounded-lg font-bold hover:bg-yellow-100 transition">
+                            Get Home Quote
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO LOCATIONS SECTION -->
+    <section class="bg-slate-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Areas We Cover</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-gray-600 border border-gray-200">Birmingham City Centre</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-gray-600 border border-gray-200">Solihull</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-gray-600 border border-gray-200">Sutton Coldfield</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-gray-600 border border-gray-200">Edgbaston</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-gray-600 border border-gray-200">Harborne</span>
+                <span class="px-4 py-2 bg-white rounded-full shadow-sm text-gray-600 border border-gray-200">Coventry (Commercial Only)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Ready for a Sparkling Clean?</h2>
+                <p class="text-gray-400">Fill out the form below or call us directly. We reply within 24 hours.</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-2xl text-gray-800">
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Name</label>
+                            <input id="name" type="text" placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Phone</label>
+                            <input id="phone" type="tel" placeholder="079..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition" required>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Email</label>
+                            <input id="email" type="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Postcode</label>
+                            <input id="postcode" type="text" placeholder="e.g. B1 1AA" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Service Needed</label>
+                        <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition bg-white">
+                            <option>Commercial / Restaurant</option>
+                            <option>End of Tenancy</option>
+                            <option>Deep House Clean</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Message (Optional)</label>
+                        <textarea id="message" rows="3" placeholder="Tell us about the property..." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-yellow-500 text-slate-900 font-bold py-4 rounded-lg hover:bg-yellow-400 transition text-lg shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                        Send Request
+                    </button>
+                    <p class="text-xs text-center text-gray-500 mt-4">By clicking send, you agree to our privacy policy. Your data is safe with us.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-gray-500 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Magic Cleaning</h4>
+                <p class="mb-4">Professional cleaning services helping Birmingham shine, one property at a time.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/profile.php?id=100093556260541" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i></a>
+                    <a href="https://www.instagram.com/magiccleaninguk" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
+                <p>Phone: <a href="tel:07914013535" class="hover:text-yellow-500">07914 013535</a></p>
+                <p>Email: <a href="mailto:magda@magiccleaning.co.uk" class="hover:text-yellow-500">magda@magiccleaning.co.uk</a></p>
+                <p>Birmingham, UK</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    <li><a href="#commercial" class="hover:text-white">Commercial Cleaning</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-gray-900">
+            <p>&copy; 2025 Magic Cleaning Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CALL BUTTON -->
+    <a href="tel:07914013535" class="sticky-call md:hidden bg-green-500 text-white rounded-full p-4 flex items-center justify-center">
+        <i data-lucide="phone" class="w-8 h-8"></i>
+    </a>
+
+    <!-- JAVASCRIPT FOR CANVAS MAGIC & UI -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FORM SUBMISSION LOGIC (WEBHOOK)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerText;
+            
+            // Gather data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                postcode: document.getElementById('postcode').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                source: 'Landing Page'
+            };
+
+            // UI Loading state
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            // Send to Webhook
+            fetch('https://primary-production-58a3.up.railway.app/webhook-test/a93394f2-a670-4495-875d-7f3751d67684', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your request has been sent. Magda will contact you shortly.');
+                    document.getElementById('contactForm').reset();
+                } else {
+                    alert('Something went wrong. Please try calling us directly at 07914 013535.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Connection error. Please try calling us directly at 07914 013535.');
+            })
+            .finally(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
+        });
+
+        // CANVAS ANIMATION (The "Magic" Part)
+        const canvas = document.getElementById('magicCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight; // Fill the hero section parent
+        }
+
+        // Particle Class
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.size = Math.random() * 2;
+                this.alpha = Math.random();
+                this.growing = true;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Bounce off edges gently
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+
+                // Twinkle effect
+                if (this.growing) {
+                    this.alpha += 0.01;
+                    if (this.alpha >= 1) this.growing = false;
+                } else {
+                    this.alpha -= 0.01;
+                    if (this.alpha <= 0.2) this.growing = true;
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 215, 0, ${this.alpha})`; // Gold color
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const particleCount = Math.floor(width * 0.15); // Density based on screen width
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw connecting lines for nearby particles (Constellation effect)
+            particles.forEach((p, index) => {
+                p.update();
+                p.draw();
+                
+                // Connect particles close to each other
+                for (let j = index + 1; j < particles.length; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x;
+                    const dy = p.y - p2.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - distance/1000})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        // Init
+        window.addEventListener('resize', () => {
+            resize();
+            initParticles();
+        });
+        resize();
+        initParticles();
+        animate();
+
+    </script>
+</body>
+</html>
