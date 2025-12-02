@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags for Birmingham Area -->
-    <title>Magic Cleaning | Commercial & Domestic Cleaning Services Birmingham</title>
+    <title>Magic Gate | Premium Cleaning Services Birmingham</title>
     <meta name="description" content="Professional cleaning services in Birmingham. Specializing in deep cleaning for restaurants, offices, and homes. End of tenancy experts. Get a free quote today.">
     <meta name="keywords" content="cleaning services birmingham, commercial cleaning birmingham, deep cleaning, restaurant cleaning, end of tenancy cleaning coventry, office cleaning birmingham">
-    <meta name="author" content="Magic Cleaning Services">
+    <meta name="author" content="Magic Gate Services">
     
     <!-- Tailwind CSS (via CDN for speed and responsiveness) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -72,9 +72,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Logo Text (Reverted) -->
+                    <!-- Logo Text -->
                     <a href="#" class="text-2xl font-bold text-slate-900 tracking-tighter">
-                        MAGIC<span class="text-yellow-600">CLEANING</span>
+                        MAGIC<span class="text-yellow-600">GATE</span>
                     </a>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
@@ -273,14 +273,31 @@
                         </div>
                     </div>
 
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Service Needed</label>
-                        <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition bg-white">
-                            <option>Commercial / Restaurant</option>
-                            <option>End of Tenancy</option>
-                            <option>Deep House Clean</option>
-                            <option>Other</option>
-                        </select>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition bg-white">
+                                <option>Commercial: Office Cleaning</option>
+                                <option>Commercial: Restaurant / Hospitality</option>
+                                <option>Domestic: End of Tenancy</option>
+                                <option>Domestic: Deep House Clean</option>
+                                <option>Domestic: Regular Cleaning (Weekly)</option>
+                                <option>Specialist: After Builders Clean</option>
+                                <option>Specialist: Carpet & Upholstery</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Estimated Budget (£)</label>
+                            <select id="budget" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition bg-white">
+                                <option>100 - 200</option>
+                                <option>200 - 300</option>
+                                <option>300 - 500</option>
+                                <option>500 - 700</option>
+                                <option>700 - 900</option>
+                                <option>1000 +</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div>
@@ -301,7 +318,7 @@
     <footer class="bg-slate-950 text-gray-500 py-12 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 text-sm">
             <div>
-                <h4 class="text-white font-bold text-lg mb-4">Magic Cleaning</h4>
+                <h4 class="text-white font-bold text-lg mb-4">Magic Gate</h4>
                 <p class="mb-4">Professional cleaning services helping Birmingham shine, one property at a time.</p>
                 <div class="flex space-x-4">
                     <a href="https://www.facebook.com/profile.php?id=100093556260541" class="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i></a>
@@ -311,7 +328,7 @@
             <div>
                 <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
                 <p>Phone: <a href="tel:07914013535" class="hover:text-yellow-500">07914 013535</a></p>
-                <p>Email: <a href="mailto:magda@magiccleaning.co.uk" class="hover:text-yellow-500">magda@magiccleaning.co.uk</a></p>
+                <p>Email: <a href="mailto:magda@magicgate.co.uk" class="hover:text-yellow-500">magda@magicgate.co.uk</a></p>
                 <p>Birmingham, UK</p>
             </div>
             <div>
@@ -324,7 +341,7 @@
             </div>
         </div>
         <div class="text-center mt-12 pt-8 border-t border-gray-900">
-            <p>&copy; 2025 Magic Cleaning Services. All rights reserved.</p>
+            <p>&copy; 2025 Magic Gate Services. All rights reserved.</p>
         </div>
     </footer>
 
@@ -359,6 +376,7 @@
                 email: document.getElementById('email').value,
                 postcode: document.getElementById('postcode').value,
                 service: document.getElementById('service').value,
+                budget: document.getElementById('budget').value,
                 message: document.getElementById('message').value,
                 source: 'Landing Page'
             };
@@ -393,7 +411,7 @@
             });
         });
 
-        // CANVAS ANIMATION (Reverted to "Golden Sparks/Magic" Part)
+        // CANVAS ANIMATION (The "Magic" Part)
         const canvas = document.getElementById('magicCanvas');
         const ctx = canvas.getContext('2d');
         let width, height;
@@ -491,5 +509,3 @@
     </script>
 </body>
 </html>
-
-
